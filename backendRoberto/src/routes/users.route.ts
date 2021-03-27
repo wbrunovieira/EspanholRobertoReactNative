@@ -4,6 +4,11 @@ import CreateUserService from '../service/CreateUserService';
 
 const usersRouter = Router();
 
+interface User {
+    name: string;
+    password?: string;
+    email: string;
+}
 
 usersRouter.post('/', async (request, response) => {
    try {
@@ -11,11 +16,13 @@ usersRouter.post('/', async (request, response) => {
 
     const createUser = new CreateUserService();
 
-    const user = await createUser.execute({
+    const user: User = await createUser.execute({
         name,
         email,
         password,
     })
+
+    delete user.password;
 
     return response.json(user );
    } catch(err) {
