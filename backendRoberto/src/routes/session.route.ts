@@ -23,11 +23,11 @@ sessionsRouter.post('/', async (request, response) => {
         password,
     });
 
-    //delete user.password;
+
 
     return response.json( {user, token} );
 
-   } catch(err) {
+   } catch(err:any) {
        return response.status(400).json({ error: err.message });
    }
 })
