@@ -1,5 +1,6 @@
 import { prisma } from "../database/prismaClient"
 import { hash } from 'bcryptjs';
+import AppError from "../errors/AppError";
 prisma
 
 interface ICreateUser {
@@ -14,14 +15,15 @@ export class CreateUserService {
 
         const emailExists = await prisma.users.findFirst({
             where: {
-                email: {
-                    equals:email,
-                },
+               email: {
+                   equals: email,
+                   mode: 'insensitive',
+               }
             },
         });
 
         if(emailExists) {
-            throw new Error('email ja existe !')
+            throw new AppError('email ja existe !')
         }
 
         const hashedPassword = await hash(password, 10);
