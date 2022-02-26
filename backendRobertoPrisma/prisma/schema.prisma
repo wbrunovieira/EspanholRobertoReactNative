@@ -24,10 +24,80 @@ model Users {
     @@map("users")
 }
 
+model Admins {
+    admin_id String @id @default(uuid())
+    name     String @unique
+    email    String @unique
+    password String
+
+    created_at DateTime @default(now())
+    updated_at DateTime @default(now())
+
+
+
+    @@map("admins")
+}
+
 model Modules {
     modules_id String @id @default(uuid())
     number     String
 
 
+
+    Verbs        Verbs[]
+    Vocabularies Vocabularies[]
+    Expressions  Expressions[]
+    Grammas      Grammas[]
     @@map("modules")
+}
+
+model Verbs {
+    verb_id        String   @id @default(uuid())
+    id_module_from String
+    module         Modules  @relation(fields: [id_module_from], references: [modules_id])
+    portuguese     String
+    spanish        String
+    created_at     DateTime @default(now())
+    updated_at     DateTime @default(now())
+
+
+    @@map("verbs")
+}
+
+model Vocabularies {
+    verb_id        String   @id @default(uuid())
+    id_module_from String
+    module         Modules  @relation(fields: [id_module_from], references: [modules_id])
+    portuguese     String
+    spanish        String
+    created_at     DateTime @default(now())
+    updated_at     DateTime @default(now())
+
+
+    @@map("vocabularies")
+}
+
+model Expressions {
+    verb_id        String   @id @default(uuid())
+    id_module_from String
+    module         Modules  @relation(fields: [id_module_from], references: [modules_id])
+    portuguese     String
+    spanish        String
+    created_at     DateTime @default(now())
+    updated_at     DateTime @default(now())
+
+
+    @@map("expressions")
+}
+
+model Grammas {
+    verb_id        String   @id @default(uuid())
+    id_module_from String
+    module         Modules  @relation(fields: [id_module_from], references: [modules_id])
+    portuguese     String
+    spanish        String
+    created_at     DateTime @default(now())
+    updated_at     DateTime @default(now())
+
+    @@map("grammas")
 }
