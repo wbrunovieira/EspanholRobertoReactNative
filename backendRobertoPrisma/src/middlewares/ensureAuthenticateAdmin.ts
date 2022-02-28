@@ -1,11 +1,11 @@
-import { Response,Request, NextFunction } from 'express';
+import { Response, Request, NextFunction } from 'express';
 import { verify } from 'jsonwebtoken';
 
 interface IPayload {
     sub: string;
 }
 
-export async function ensureAuthenticateUse(request:Request, response:Response, next:NextFunction) {
+export async function ensureAuthenticateAdmin(request:Request, response:Response, next:NextFunction) {
 
     const authHeader = request.headers.authorization;
 
@@ -19,9 +19,9 @@ export async function ensureAuthenticateUse(request:Request, response:Response, 
 
     try {
 
-        const { sub }= verify(token, "c0988d02440325fddab5405e5c628d9f") as IPayload;
+        const { sub }= verify(token, "c0988d02440325fccab5405e5c628d9f") as IPayload;
 
-        request.user_id  = sub;
+        request.admin_id = sub;
 
         return next();
 
