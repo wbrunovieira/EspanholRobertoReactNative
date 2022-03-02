@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "espanhol-roberto-mobile",
+    "slug": "espanhol-roberto-mobile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
