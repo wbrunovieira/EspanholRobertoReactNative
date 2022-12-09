@@ -3,6 +3,10 @@ import 'reflect-metadata';
 import express, {Request, Response, NextFunction} from 'express';
 import 'express-async-errors';
 
+import swaggerUi from 'swagger-ui-express';
+
+import swaggerFile from './swagger.json';
+
 import routes from './routes';
 import uploadConfig from './config/upload';
 
@@ -13,6 +17,7 @@ import './database';
 const app = express();
 
 app.use(express.json());
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use('/files', express.static(uploadConfig.directory));
 app.use(routes);
 
