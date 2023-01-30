@@ -1,0 +1,88 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Espanhol com o Roberto Documentation",
+        "description": "This is an API Espanhol com o Roberto - backend",
+        "version": "1.0.0",
+        "contact": {
+            "email": "wbrunovieira77@gmail.com"
+        }
+    },
+    "paths": {
+        "/users/avatar": {
+
+            "path":{
+                "tags": ["Avatar"],
+                "sumary":"update the avatar image ",
+                "description":"update the avatar image",
+                "security": [
+                    { "bearerAuth": []}
+                  ],
+                  "parameters": [
+                    {
+                      "name": "id",
+                      "in": "path",
+                      "description": "user id",
+                      "required": true,
+                      "schema": {
+                        "type": "string"
+                      }
+                    }
+                  ],
+
+                  "/sessions":{
+                    "paths": {
+                        "tags": [
+                            "Authentication"
+                        ],
+                        "sumary": "create a token",
+                        "description": "authenticate and create a token",
+                        "security": [
+                            {
+                                "bearerAuth": []
+                            }
+                        ],
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+
+                                            "email": {
+                                                "type": "string"
+                                            },
+                                            "password": {
+                                                "type": "string"
+                                            }
+
+                                        },
+                                        "example": {
+
+                                            "email": "User email Sample",
+                                            "password": "User password sample"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "responses": {
+                            "201": {
+                                "description": "Success"
+                            },
+                            "500": {
+                                "description": "User/ password doest exists"
+                            }
+                        }
+                    }
+
+
+
+                }
+
+    }
+
+
+}
+}
+}
