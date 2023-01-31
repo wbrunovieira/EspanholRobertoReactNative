@@ -1,4 +1,4 @@
-import { FileX } from "phosphor-react"
+
 import { styled } from "../../styles"
 
 export const Container = styled('div', {
@@ -7,7 +7,9 @@ export const Container = styled('div', {
   height: '50px',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'space-around',
+  margin: '0 auto',
+  MaxWidth:'1066px',
 
 
   '&:hover': {
@@ -16,7 +18,7 @@ export const Container = styled('div', {
 })
 
 export const Whatapp = styled('a', {
-    backgroundColor: '$firstline',
+    
     border: 0,
     display: 'flex',
     alignItems: 'center',
@@ -33,6 +35,8 @@ export const TextoWhois = styled('p', {
     fontSize: 14,
     paddingLeft:200,
     paddingRight:100,
+    
+    fontWeight:'bold'
 
     
 
@@ -42,6 +46,8 @@ export const TextoWhatis = styled('p', {
     fontSize: 14,
     paddingLeft:10,
     paddingRight:100,
+    
+    fontWeight:'bold',
 
     
 

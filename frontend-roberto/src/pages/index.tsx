@@ -1,11 +1,13 @@
 import { FirstLine } from "../components/FirstLine";
+import { Header } from "../components/Header";
 
 
 export default function Home() {
   return (
     <>
     <FirstLine />
-     <h1>Espanhol Com o Roberto</h1>
+     
+     <Header />
     </>
   )
 }

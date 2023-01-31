@@ -6,9 +6,10 @@ export function FirstLine() {
     
       <Container>
 
-        <TextoWhatis>Cursos de Espanhol Online com aulas aovivo</TextoWhatis>
+        <TextoWhatis>Cursos de Espanhol Online com aulas ao-vivo</TextoWhatis>
           <Whatapp href="https://wa.me/351936492123"> 
             <Image src={WhasappIMG} alt="Imagem Whatsapp"/>
+            <p>|</p>
             <TextoWhatis>(+351) 936 492 123</TextoWhatis>
         </Whatapp>
       </Container>
