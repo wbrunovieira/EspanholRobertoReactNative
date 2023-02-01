@@ -1,6 +1,8 @@
 import { Container, Link, List, LoginButton} from "./styles";
 import Logo from '../../assets/LogoEspanholComORoberto.svg'
 
+import { SignIn } from 'phosphor-react'
+
 import Image from "next/image";
 
 export function Header() {
@@ -22,7 +24,11 @@ export function Header() {
         <li><Link><p>SOBRE</p></Link></li>
       </List>
 
-      <LoginButton>LOGIN</LoginButton>
+      <LoginButton>
+        
+        <SignIn size={32} color="white" weight="fill"/>
+        LOGIN
+        </LoginButton>
     </Container>
     
     

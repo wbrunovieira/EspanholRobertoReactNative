@@ -1,3 +1,4 @@
+import { SignIn } from 'phosphor-react';
 import { styled } from "../../styles"
 
 export const Container = styled('nav', {
@@ -6,10 +7,11 @@ export const Container = styled('nav', {
   justifyContent: 'center',
   margin: '0 auto',
   Width:'1066px',
-  backgroundColor: '$white',
+  backgroundColor: '$gray100',
   border: 0,
   height: '400',
   paddingTop:20,
+ 
 
 
 
@@ -21,9 +23,11 @@ export const List = styled('ul', {
   justifyContent: 'space-between',
   paddingRight:80,
   textAlign:'end',
-  paddingLeft: 100,
-
-  
+  paddingLeft: 1,
+  backgroundColor: '$gray100',
+ marginRight:20,
+ marginLeft:20,
+  boxShadow:'6px 6px 23px -13px rgba(0,0,0.88)',
 
 
 
@@ -32,21 +36,26 @@ export const List = styled('ul', {
 export const Link = styled('a', {
   display: 'inline-block',
   padding: '20px',
+  fontSize:'12px',
   
   color: '$firstline',
   textDecoration: 'none',
   fontWeight:'bold',
+  fontFamily:'Poppins',
   cursor: 'pointer',
   transition: '0.2s ease-in',
+  
 
   p: {
     '&::before': {
       content: '',
       height: '16px',
       width: '1px',
+     
       background: '$firstline',
       display: 'block',
       float: 'left',
+      top: 0,
       marginRight:'40px',
 
     },
@@ -71,6 +80,9 @@ export const Link = styled('a', {
 });
 
 export const LoginButton = styled('button', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent:'center',
   color:'white',
   backgroundColor: '$yellowact',
   fontWeight:'bold',
@@ -79,6 +91,9 @@ export const LoginButton = styled('button', {
   borderRadius:'5px',
   cursor: 'pointer',
 
+  SignIn: {
+    padding: 20
+  },
   '&:hover': {
     filter: 'brightness(0.8)'
   }
