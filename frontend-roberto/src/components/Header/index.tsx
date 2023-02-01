@@ -6,20 +6,20 @@ import Image from "next/image";
 export function Header() {
   return (
     <Container >
-      <Image src={Logo} alt="Logo" width={200} height={200}/>
+      <Image src={Logo} alt="Logo" width={120} height={120}/>
 
       <List>
-        <li><Link>HOME</Link></li>
-        <li>|</li>
-        <li><Link>CURSOS</Link></li>
-        <li>|</li>
-        <li><Link>TRADUÇÕES</Link></li>
-        <li>|</li>
-        <li><Link>CONTACTOS</Link></li>
-        <li>|</li>
-        <li><Link>BLOG</Link></li>
-        <li>|</li>
-        <li><Link>SOBRE</Link></li>
+        <li><Link><p>HOME</p></Link></li>
+        
+        <li><Link><p>CURSOS</p></Link></li>
+        
+        <li><Link><p>TRADUÇÕES</p></Link></li>
+        
+        <li><Link><p>CONTACTOS</p></Link></li>
+        
+        <li><Link><p>BLOG</p></Link></li>
+        
+        <li><Link><p>SOBRE</p></Link></li>
       </List>
 
       <LoginButton>LOGIN</LoginButton>

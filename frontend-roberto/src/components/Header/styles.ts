@@ -9,7 +9,8 @@ export const Container = styled('nav', {
   backgroundColor: '$white',
   border: 0,
   height: '400',
-  paddingTop:40
+  paddingTop:20,
+
 
 
 })
@@ -21,6 +22,9 @@ export const List = styled('ul', {
   paddingRight:80,
   textAlign:'end',
   paddingLeft: 100,
+
+  
+
 
 
 });
@@ -35,17 +39,30 @@ export const Link = styled('a', {
   cursor: 'pointer',
   transition: '0.2s ease-in',
 
-  // '&::after': {
-  //   content: '|',
-  //   display: 'block',
-  //   position: 'absolute',
-  //   color: '$firstline',
-  //   top: '-3px',
-  //   left: '-3px',
-  //   width: '15px',
-  //   height: '15px',
-   
-  // },
+  p: {
+    '&::before': {
+      content: '',
+      height: '16px',
+      width: '1px',
+      background: '$firstline',
+      display: 'block',
+      float: 'left',
+      marginRight:'40px',
+
+    },
+    
+    '&::last-child':{
+      content:'',
+      height: '0px',
+      width: '0px',
+      background: '$firstline',
+      display: 'block',
+      float: 'left',
+      marginRight:'40px',
+    }
+
+  },
+
 
   '&:hover': {
     filter: 'brightness(0.8)',
@@ -56,7 +73,8 @@ export const Link = styled('a', {
 export const LoginButton = styled('button', {
   color:'white',
   backgroundColor: '$yellowact',
-  padding: 6,
+  fontWeight:'bold',
+  padding: 12,
   border: 'none',
   borderRadius:'5px',
   cursor: 'pointer',
@@ -64,7 +82,6 @@ export const LoginButton = styled('button', {
   '&:hover': {
     filter: 'brightness(0.8)'
   }
-  
   
   
 })
