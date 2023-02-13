@@ -93,6 +93,7 @@ export const DescriptionAbout = styled('div', {
   margin: '0 auto',
   position: 'relative',
   width: '100%',
+  marginBottom:'40px',
 
  
 
@@ -151,3 +152,64 @@ export const AboutButton = styled('button',{
   position: 'absolute',
   top: '-150px',
 })
+
+export const BannerMotivation = styled('div', {
+  display: 'flex',
+  justifyContent:'center',
+  alignItems:'center',
+  maxWidth:'1061px',
+  marginTop:'40px',
+  position: 'relative',
+
+  '&::before': {
+    content: "''",
+    height: '5px',
+    position: 'absolute',
+    borderRadius:'5px',
+    width: '100%',
+    background: '#4257A7',
+    display: 'block',
+    
+    marginRight:'40px',
+    margin: '3 auto',
+    top:'-40px',
+    left: 0,
+    
+  },
+
+})
+
+export const TextMotivation = styled('div', {
+  display: 'flex',
+  justifyContent:'center',
+  margin: '0 auto',
+  alignItems:'center',
+  flexDirection:'column',
+  
+  backgroundColor:'#4257A7',
+  width: '100%',
+  height: '377px',
+  borderRadius:'0px 50px 50px 0px',
+
+  p: {
+    display: 'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    padding: '5px 40px',
+    marginBottom:'40px',
+    fontWeight:'italic',
+    fontSize:'20px',
+    lineHeight:'32px',
+    color: '$white',
+    textTransform: 'capitalize',
+  },
+
+  strong:{
+  
+    padding: '0px 40px',
+    marginTop:'-50px',
+    flex:'1',
+    
+  }
+  
+} )

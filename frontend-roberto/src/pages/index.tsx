@@ -1,6 +1,7 @@
 
 import { Header } from "../components/Header";
-import { AboutButton, BannerRoberto, DescriptionAbout, HomeContainer, Title } from "../styles/pages/home";
+import { AboutButton, BannerMotivation, BannerRoberto, DescriptionAbout, HomeContainer, TextMotivation, Title } from "../styles/pages/home";
+import Image from "next/image";
 
 import bannerHome from '../assets/banner-home.png'
 import CurveLine from '../assets/CurveLine.svg'
@@ -10,7 +11,8 @@ import iconBookOut from '../assets/IconsBooksout.svg'
 import bannerForPic from '../assets/banner-roberto.svg'
 
 import fotoRoberto from '../assets/fotoRoberto.png'
-import Image from "next/image";
+
+import SpainKeyboard from '../assets/TecladoEspanha.png'
 
 
 export default function Home() {
@@ -34,7 +36,7 @@ export default function Home() {
         <DescriptionAbout>
           <p> - Professor Nativo <br/>
            - Mais de 20 anos <br/>
-                de Experiencia <br/>
+                de Experiência <br/>
           - Licenciado em Letras
           </p>
           <AboutButton>
@@ -42,7 +44,18 @@ export default function Home() {
           </AboutButton>
         </DescriptionAbout>
     
-         
+         <BannerMotivation>
+            <Image src={SpainKeyboard} alt="teclado imagem" width={566} height={377}/>
+            <TextMotivation>
+              <div>
+                <p>“Aprender um novo idioma é ter mais uma janela para olhar para o Mundo.”
+                </p>
+                <strong>Provébio chinês</strong>
+
+              </div>
+
+            </TextMotivation>
+         </BannerMotivation>
           
 
      
