@@ -35,7 +35,7 @@ export const List = styled('ul', {
 
 export const Link = styled('a', {
   display: 'inline-block',
-  padding: '20px',
+  padding: '10px',
   fontSize:'12px',
   
   color: '$firstline',
@@ -44,9 +44,13 @@ export const Link = styled('a', {
   fontFamily:'Poppins',
   cursor: 'pointer',
   transition: '0.2s ease-in',
+  letterSpacing: '3px',
   
 
   p: {
+
+    
+
     '&::before': {
       content: '',
       height: '16px',
