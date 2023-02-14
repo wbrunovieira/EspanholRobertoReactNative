@@ -33,7 +33,7 @@ export const List = styled('ul', {
 
 });
 
-export const Link = styled('a', {
+export const LinkStyle = styled('a', {
   display: 'inline-block',
   padding: '10px',
   fontSize:'12px',
