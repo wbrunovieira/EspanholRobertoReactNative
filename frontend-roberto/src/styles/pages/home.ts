@@ -10,6 +10,11 @@ export const HomeContainer = styled('main', {
     letterSpacing: '5px',
     textTransform:'uppercase',
 
+    img :{
+
+      objectFit:'cover',
+    }
+
 })
 
 export const Title = styled('h1', {
@@ -213,3 +218,56 @@ export const TextMotivation = styled('div', {
   }
   
 } )
+
+export const TestemonyBanner = styled('div', {
+  marginTop:'40px',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent:'flex-start',
+  alignItems:'center',
+  backgroundColor:'$yellowact',
+  width:'1100px',
+  margin: 'auto',
+  height: '560px',
+  position: 'relative',
+  overflow: 'hidden',
+ 
+  gap: '20px',
+
+  '&:first-child':{
+    display: 'block',
+    position: 'absolute',
+    left:'500px',
+    top:'10px',
+    filter: 'opacity(50%)',
+    zIndex:'1',
+
+  },
+
+ 
+  
+})
+
+export const TestemonyCard = styled('div', {
+
+  display: 'flex',
+  flexDirection:'column',
+  justifyContent:'center',
+  alignItems:'center',
+  color: '$firstline',
+  backgroundColor:'$white',
+  width:'500px',
+  height: '360px',
+  borderRadius: '50px',
+  boxShadow:'10px 10px 80px rgba(103, 106, 117, 0.2)',
+
+
+
+  img:{
+    marginTop:'10px',
+    
+  },
+
+  
+
+})

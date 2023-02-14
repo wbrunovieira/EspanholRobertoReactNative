@@ -1,18 +1,18 @@
 
 import { Header } from "../components/Header";
-import { AboutButton, BannerMotivation, BannerRoberto, DescriptionAbout, HomeContainer, TextMotivation, Title } from "../styles/pages/home";
+import { AboutButton, BannerMotivation, BannerRoberto, DescriptionAbout, HomeContainer, TestemonyBanner, TestemonyCard, TextMotivation, Title } from "../styles/pages/home";
 import Image from "next/image";
 
-import bannerHome from '../assets/banner-home.png'
 import CurveLine from '../assets/CurveLine.svg'
 import iconBookin from '../assets/IconBooks.svg'
 import iconBookOut from '../assets/IconsBooksout.svg'
-
 import bannerForPic from '../assets/banner-roberto.svg'
-
+import fiveStars from '../assets/5stars.svg'
 import fotoRoberto from '../assets/fotoRoberto.png'
-
 import SpainKeyboard from '../assets/TecladoEspanha.png'
+import bannerHome from '../assets/banner-home.png'
+import curvelineTestimonal1 from '../assets/CurveLineTestimonal1.svg'
+import curvelineTestimonal2 from '../assets/CurveLineTestimonal2.svg'
 
 
 export default function Home() {
@@ -57,7 +57,44 @@ export default function Home() {
             </TextMotivation>
          </BannerMotivation>
           
+          <TestemonyBanner>
 
+              <Image src={curvelineTestimonal1} alt="linha curva 1" />
+
+            <TestemonyCard >
+              <p>Excelente professor, muito didático.</p>
+              <p>Maria Fátima</p>
+              <Image src={fiveStars} alt="5 estrelas" />
+            </TestemonyCard >
+
+            <TestemonyCard >
+              <p>Adoro as aulas do Roberto, sempre bem disposto.</p>
+              <p>Pedro Santos</p>
+              <Image src={fiveStars} alt="5 estrelas" />
+            </TestemonyCard >
+
+
+            <TestemonyCard >
+              <p>Agora me sinto nas conversas, nas minhas viagens para a Espanha</p>
+              <p>Maria José</p>
+              <Image src={fiveStars} alt="5 estrelas" />
+            </TestemonyCard >
+           
+            <TestemonyCard >
+              <p>Agora me sinto nas conversas, nas minhas viagens para a Espanha</p>
+              <p>Maria José</p>
+              <Image src={fiveStars} alt="5 estrelas" />
+            </TestemonyCard >
+
+            <TestemonyCard >
+              <p>Agora me sinto nas conversas, nas minhas viagens para a Espanha</p>
+              <p>Maria José</p>
+              <Image src={fiveStars} alt="5 estrelas" />
+            </TestemonyCard >
+
+              {/* <Image src={curvelineTestimonal2} alt="linha curva 2" /> */}
+
+          </TestemonyBanner>
      
     </HomeContainer>
     

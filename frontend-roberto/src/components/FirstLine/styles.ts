@@ -2,14 +2,16 @@
 import { styled } from "../../styles"
 
 export const Container = styled('div', {
+  display: 'flex',
+  flex: '1',
   backgroundColor: '$firstline',
   border: 0,
+  // position: 'fixed',
   height: '50px',
-  display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-around',
-  margin: '0 auto',
-  MaxWidth:'1066px',
+   margin: '0 auto',
+  MaxWidth:'100%',
 
 
   '&:hover': {
