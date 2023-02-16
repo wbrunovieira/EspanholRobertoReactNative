@@ -17,6 +17,7 @@ export const {
       firstline:'#12232F',
       white: '#FFF',
       yellowact:'#EFBD2F',
+      blue:'#4257A7',
 
       gray900: '#121214',
       gray800: '#202024',

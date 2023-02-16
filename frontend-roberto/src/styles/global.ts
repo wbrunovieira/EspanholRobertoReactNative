@@ -1,11 +1,5 @@
 import { globalCss } from ".";
-import { Roboto , Poppins} from '@next/font/google'
-
-const roboto = Roboto({
-  weight: ['400', '700'],
-  style: ['normal'],
-  subsets:['latin']
-  })
+import { Poppins} from '@next/font/google'
 
   const poppins = Poppins({
     weight: ['400', '700'],
@@ -26,7 +20,7 @@ export const globalStyles = globalCss({
   },
 
   'body, input, textarea, button': {
-    fontFamily: 'Roboto',
+    fontFamily: 'Poppins',
     fontWeight: 400
   }
 })
