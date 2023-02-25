@@ -11,7 +11,14 @@ export const {
   theme,
   createTheme,
 } = createStitches({
+
+  
   theme: {
+    
+    
+    linearGradient: (value:any) => ({
+      backgroundImage: `linear-gradient(${value})`,
+    }),
     colors: {
 
       firstline:'#12232F',
